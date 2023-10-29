@@ -9,6 +9,7 @@ import { CSSPlugin } from 'gsap/CSSPlugin'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
+import phoneImg from 'public/assets/images/phone.png'
 import logo from 'public/assets/logos/ahead-logo.jpg'
 import progressImage from '/public/assets/images/progress.png'
 import trackImage from '/public/assets/images/track.png'
@@ -178,6 +179,7 @@ export default function Home() {
             </div>
           </footer>
         </aside>
+        <Image src={phoneImg} width={500} height={''} alt='phoneImg' className='phoneImg' />
       </section>
       <section className="eq-beats-div no-color-div" >
         <span className="eq-beats-heading eq-beats-section">
