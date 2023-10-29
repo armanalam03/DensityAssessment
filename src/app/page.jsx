@@ -9,16 +9,16 @@ import { CSSPlugin } from 'gsap/CSSPlugin'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
-import logo from '../assets/logos/ahead-logo.jpg'
-import progressImage from '../assets/images/progress.png'
-import trackImage from '../assets/images/track.png'
-import signature from '../assets/images/signature.png'
-import ghost from '../assets/images/ghost.png'
-import mailIcon from '../assets/images/mail.png'
-import locationIcon from '../assets/images/location.png'
-import appleLogo from '../assets/images/apple.png'
-import AppleBtn from '../assets/images/appleBtn.png'
-import stars from '../assets/images/stars.png'
+import logo from 'public/assets/logos/ahead-logo.jpg'
+import progressImage from '/public/assets/images/progress.png'
+import trackImage from '/public/assets/images/track.png'
+import signature from '/public/assets/images/signature.png'
+import ghost from '/public/assets/images/ghost.png'
+import mailIcon from '/public/assets/images/mail.png'
+import locationIcon from '/public/assets/images/location.png'
+import appleLogo from '/public/assets/images/apple.png'
+import AppleBtn from '/public/assets/images/appleBtn.png'
+import stars from '/public/assets/images/stars.png'
 
 export default function Home() {
 
