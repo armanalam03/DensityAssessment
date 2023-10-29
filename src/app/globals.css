@@ -1,27 +1,495 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+body{
+  background-color: white;
+  color: black;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* NAVBAR */
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6%;
+  font-size: 14px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 10;
+}
+
+.logo{
+  border-radius: .7rem;
+}
+
+.nav-elements{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.black-btn{
+  background-color: black;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  font-size: 13px;
+}
+
+.coloured-div{
+  width: 95%;
+  background-color: rgb(238,235,254);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  height: 80vh;
+  margin: 30px;
+  padding: 40px;
+}
+
+.div-content{
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+}
+
+.headline{
+  font-size: 80px;
+  font-weight: 600;
+  margin: 10px 0px 30px 0px;
+}
+
+.appstore-div{
+  display: flex;
+  align-items: center;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.appstore-download-btn{
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+}
+
+.download-btn-content{
+  font-size: 8px;
+}
+
+.appstore{
+  font-size: 20px;
+}
+
+.ratings-div{
+  display: flex;
+  flex-direction: column;
+}
+
+.ratings-text{
+  font-size: 12px;
+  color: rgb(51, 51, 51);
+}
+
+.stars{
+  margin: 5px 0px;
+}
+
+.no-color-div{
+  width: 95%;
+  display: flex;
+  margin: 50px;
+}
+
+.eq-beats-section{
+  width: 30%;
+  padding: 40px;
+}
+
+.eq-beats-heading{
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.eq-text{
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.familiar-card-div{
+  display: flex;
+  flex-direction: column;
+}
+
+.familiar-div-heading{
+  font-size: 15px;
+  font-weight: 700;
+  padding: 40px;
+  transform: translateX(-70px);
+}
+
+.cards-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+}
+
+.card{
+  width: 370px;
+  background-color: rgb(238,235,254);
+  border-radius: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+.card-emoji{
+  font-size: 30px;
+  margin: 10px 0px;
+}
+
+.card-heading{
+  font-size: 15px;
+  font-weight: 600;
+  margin: 10px 0px;
+}
+
+.card-text{
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.meet-app-div{
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 60px;
+  background-color: rgb(254,247,241);
+}
+
+.div-headings{
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}
+
+.large-heading-text{
+  font-size: 45px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+#meetAheadAppHeadings{
+  /* font-size: 45px; */
+  font-weight: 700;
+  margin-top: 10px;
+  transform: translateX(-70px);
+}
+
+.content-section-container{
+  display: flex;
+  justify-content: space-around;
+  width: 95%;
+  height: 50%;
+  margin: 20px 0px;
+}
+
+.content-section{
+  width: 50%;
+  padding: 40px;
+  font-size: 10px;
+  /* line-height: 32px; */
+}
+
+.rate-div{
+  flex-direction: column;
+  align-items: center;
+  padding: 70px;
+  background-color: rgb(237,248,254);
+}
+
+.headings-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progress-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 40px 0px;
+}
+
+#progress-img{
+  width: 20px;
+}
+
+.progress-text{
+  display: flex;
+  justify-content: space-between;
+  width: 98%;
+}
+
+.progress{
+  font-size: 5px;
+  width: 250px;
+  text-align: center;
+  line-height: 20px;
+}
+
+#track-img{
+  width: 12vw;
+  height: 4vw;
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.05));
+}
+
+.test-div{
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.quote{
+  font-size: 22px;
+  font-weight: 400;
+  margin: 20px 0px;
+  width: 60%;
+  line-height: 35px;
+  color: rgb(144, 144, 144);
+  text-align: center;
+}
+
+.signature-div{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btn-footer-text{
+  font-size: 13px;
+  font-weight: 500;
+  color: rgb(170, 170, 170);
+  margin: 20px;
+}
+
+.work-with-us-div{
+  flex-direction: column;
+  padding: 40px;
+  height: 85vh;
+}
+
+.work-with-us-heading{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 80px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+#work-with-us-text{
+  transform: translateX(-70px);
+}
+
+.company-name{
+  color: rgb(99,64,239);
+  transform: translateX(70px);
+}
+
+.work-with-us-content-container{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: 80%;
+}
+
+.about-product-container{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  height: 80%;
+}
+
+.about-product-section{
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  border-radius: 20px;
+  height: 100%;
+}
+
+.ghost{
+  margin-bottom: 20px;
+}
+
+.about-product-heading{
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.about-product-text{
+  line-height: 30px;
+  color: rgb(100, 100, 100);
+  font-size: 18px;
+}
+
+.product{
+  background-color: rgb(254,247,241);
+}
+
+.cards-list{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.ahead-card{
+  background-color: white;
+  padding: 40px;
+}
+
+.ahead-card-text{
+  color: rgb(161, 161, 161);
+}
+
+.cards-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+.cards-list::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 5px;
+}
+
+/* Handle */
+.cards-list::-webkit-scrollbar-thumb {
+  background: rgba(99, 64, 239, 0.5);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+.cards-list::-webkit-scrollbar-thumb:hover {
+  background:rgba(99, 64, 239);
+}
+
+.vacancies-div{
+  display: flex;
+  flex-direction: column;
+  padding: 60px;
+}
+
+.vacancies-cards-container{
+  margin: 40px 0px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.vacancies-div-heading{
+  transform: translateX(-100px);
+  opacity: 0;
+}
+
+.vacancies-card{
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(254,251,236);
+  border-radius: 20px;
+  line-height: 30px;
+  transition: all 0.4s ease-in-out;
+}
+
+.vacancies-card:hover{
+  background-color: rgb(255, 237, 192);
+}
+
+.vacancies-card-heading{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.vacancy-specs{
+  margin-left: 20px;
+}
+
+.vacancy-spec{
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid rgb(209, 209, 209);
+  padding: 50px;
+  justify-content: center;
+}
+
+.footer-company-name{
+  font-size: 23px;
+  font-weight: 600;
+  margin: 10px 0px;
+}
+
+.company-details-div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+  margin: 20px 0px;
+}
+
+.company-detail{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.footer-icon{
+  margin-right: 10px;
+}
+
+.company-address-text{
+  font-size: 14px;
+}
+
+.rights-text{
+  font-size: 12px;
+  color: rgb(170, 170, 170);
+  margin: 40px 0px;
 }
